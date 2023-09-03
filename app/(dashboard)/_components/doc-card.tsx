@@ -14,7 +14,7 @@ import Link from "next/link";
 import { db } from "@/drizzle/db";
 import { deleteDocument } from "../_actions";
 
-export function DocCard({ id, title }: Omit<Document, "content">) {
+export function DocCard({ id, title }: Omit<Document, "content" | "userId">) {
   return (
     <div>
       <Card className="transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110 cursor-pointer">

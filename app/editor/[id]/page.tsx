@@ -7,6 +7,7 @@ import { Loading } from "@/components/Loading";
 import { Editor } from "./_components/editor";
 import { TitleInput } from "./_components/title-input";
 import { Room } from "./_components/room";
+import { CollaborativeEditor } from "@/components/CollaborativeEditor";
 
 interface Props {
   params: {
@@ -27,10 +28,11 @@ export default async function EditorPage({ params }: Props) {
   if (!doc) return <Loading />;
   return (
     <main className="flex flex-col gap-4">
-      <TitleInput defaultValue={doc.title} />
+      {/* <TitleInput defaultValue={doc.title} /> */}
 
       <Room roomId={id}>
-        <Editor />
+        {/* <Editor /> */}
+        <CollaborativeEditor />
       </Room>
     </main>
   );
